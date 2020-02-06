@@ -6,35 +6,44 @@ import tokens from "./tokens"
 interface InternalLinkProps {
   to: string
   activeClassName?: string
+  primary?: boolean;
 }
 
 interface ExternalLinkProps {
   href: string
+  primary?: boolean;
 }
 
 interface CommonLinkProps {
   children: ReactNode
   className?: string
+  primary?: boolean;
   [x: string]: any;
 }
 
 type LinkProps = CommonLinkProps &
   (InternalLinkProps | ExternalLinkProps)
 
-const InternalLink = styled(GatsbyLink)`
-  color: ${tokens.colors.primary};
+const InternalLink = styled(GatsbyLink)<InternalLinkProps>`
+  color: ${({ primary }) => primary ? tokens.colors.white : tokens.colors.text};
+  background: ${({ primary }) => primary ? tokens.colors.primary : 'none'};
   text-decoration: none;
   font-size: ${tokens.font.size.regular};
+  border-radius: ${tokens.BORDER_RADIUS}px;
+  padding: ${({ primary }) => primary ? `${tokens.spacing.xxsmall}px ${tokens.spacing.small}px` : 0};
 
   &:hover {
     text-decoration: underline;
   }
 `
 
-const ExternalLink = styled.a`
-  color: ${tokens.colors.primary};
+const ExternalLink = styled.a<ExternalLinkProps>`
+  color: ${({ primary }) => primary ? tokens.colors.white : tokens.colors.text};
   text-decoration: none;
   font-size: ${tokens.font.size.regular};
+  background: ${({ primary }) => primary ? tokens.colors.primary : 'none'};
+  border-radius: ${tokens.BORDER_RADIUS}px;
+  padding: ${({ primary }) => primary ? `${tokens.spacing.xxsmall}px ${tokens.spacing.small}px` : 0};
 
   &:hover {
     text-decoration: underline;
@@ -46,12 +55,13 @@ const Link: React.FC<LinkProps> = ({
   href,
   className,
   activeClassName,
+  primary,
   children,
 }: LinkProps): ReactElement<typeof GatsbyLink | HTMLAnchorElement> => {
   return to ? (
-    <InternalLink to={to} activeClassName={activeClassName} className={className}>{children}</InternalLink>
+    <InternalLink to={to} activeClassName={activeClassName} className={className} primary={ primary }>{children}</InternalLink>
   ) : (
-    <ExternalLink href={href} className={className}>{children}</ExternalLink>
+    <ExternalLink href={href} className={className} primary={ primary }>{children}</ExternalLink>
   )
 }
 

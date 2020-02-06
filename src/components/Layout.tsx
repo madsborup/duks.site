@@ -35,7 +35,7 @@ export default ({children}: Props): ReactElement<typeof DesignSystemProvider> =>
   return (
     <DesignSystemProvider>
       <GlobalStyle />
-      <Header siteTitle="Site Title" />
+      <Header siteTitle="Duks" />
       <Wrapper>
       {children}
       </Wrapper>

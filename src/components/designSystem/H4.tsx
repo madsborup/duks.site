@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import tokens from './tokens'
 
-export default styled.h3`
-  font-size: ${tokens.font.size.h3};
+export default styled.h4`
+  font-size: ${tokens.font.size.h4};
 `;
