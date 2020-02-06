@@ -18,11 +18,12 @@ export default {
   colors: {
     white: "#FFFFFF",
     background: "#FFF",
-    border: "#E1E1E5",
+    border: "#EAEAEA",
     hover: "#F8F9F9",
     text: "#1A1F2B",
     textMuted: "#9E9FA0",
     primary: "#5A51FB",
+    primaryMuted: "#6B62F8",
     secondary: "#5FAAFC"
   },
   font: {

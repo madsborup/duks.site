@@ -1,5 +1,1 @@
-Gatsby starter with:
-
-- TypeScript
-- MDX
-- styled-components
+Landing page of Duks.

@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Helmet } from "react-helmet"
 import Link from "./designSystem/Link"
 import tokens from "./designSystem/tokens"
 
@@ -9,9 +10,11 @@ interface Props {
 
 const Header: React.FC<Props> = ({ siteTitle }: Props) => {
   const StyledHeader = styled.div`
+    background: ${tokens.colors.white};
     border-bottom: 1px solid ${tokens.colors.border};
     padding: ${tokens.spacing.large}px 0 ${tokens.spacing.xsmall}px;
-    margin-bottom: ${tokens.spacing.xlarge}px;
+    margin-bottom: calc(${tokens.spacing.large}px * 2);
+    width: 100%;
   `
 
   const Nav = styled.nav`
@@ -23,18 +26,27 @@ const Header: React.FC<Props> = ({ siteTitle }: Props) => {
     max-width: ${tokens.CONTENT_WIDTH}px;
   `
 
+  const TitleLink = styled(Link)`
+    font-size: ${tokens.font.size.h2};
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    color: ${tokens.colors.primary};
+  `
+
   const NavLink = styled(Link)`
     font-size: ${tokens.font.size.h3};
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: -0.2px;
   `
 
   return (
     <StyledHeader>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Duks - Project Management for Changing Teams</title>
+      </Helmet>
       <Nav>
-        <NavLink to="/">
-          {siteTitle}
-        </NavLink>
+        <TitleLink to="/">{siteTitle}</TitleLink>
         <NavLink to="/signup" primary>
           Sign Up
         </NavLink>
