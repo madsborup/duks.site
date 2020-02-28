@@ -12,30 +12,28 @@ const Header: React.FC<Props> = ({ siteTitle }: Props) => {
   const StyledHeader = styled.div`
     background: ${tokens.colors.white};
     border-bottom: 1px solid ${tokens.colors.border};
-    padding: ${tokens.spacing.large}px 0 ${tokens.spacing.xsmall}px;
-    margin-bottom: calc(${tokens.spacing.large}px * 2);
-    width: 100%;
+    padding: ${tokens.spacing.medium}px 0 ${tokens.spacing.xsmall}px;
+    margin: 0 auto;
+    max-width: ${tokens.CONTENT_WIDTH}px;
   `
 
   const Nav = styled.nav`
     display: grid;
     grid-template-columns: 1fr auto auto;
     grid-gap: ${tokens.spacing.large}px;
-    margin: 0 auto;
     align-items: center;
-    max-width: ${tokens.CONTENT_WIDTH}px;
   `
 
   const TitleLink = styled(Link)`
+    color: ${tokens.colors.heading};
     font-size: ${tokens.font.size.h2};
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: -0.2px;
-    color: ${tokens.colors.primary};
   `
 
   const NavLink = styled(Link)`
-    font-size: ${tokens.font.size.h3};
-    font-weight: 500;
+    font-size: ${tokens.font.size.h4};
+    font-weight: 600;
     letter-spacing: -0.2px;
   `
 
@@ -47,7 +45,7 @@ const Header: React.FC<Props> = ({ siteTitle }: Props) => {
       </Helmet>
       <Nav>
         <TitleLink to="/">{siteTitle}</TitleLink>
-        <NavLink to="/signup" primary>
+        <NavLink href="https://app.duks.site/login">
           Sign Up
         </NavLink>
         <NavLink href="https://app.duks.site/login">Log In</NavLink>

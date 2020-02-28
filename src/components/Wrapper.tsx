@@ -4,7 +4,7 @@ import tokens from "./designSystem/tokens"
 
 const StyledWrapper = styled.div`
   max-width: ${tokens.CONTENT_WIDTH}px;
-  margin: 0 auto;
+  margin: ${tokens.spacing.xlarge}px auto 0;
 `
 
 const Wrapper: React.FC = ({ children }) => {

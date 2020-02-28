@@ -2,7 +2,7 @@ import '../../../static/fonts/inter.css'
 
 const BASELINE = 20;
 const BORDER_RADIUS = 4;
-const CONTENT_WIDTH = 800;
+const CONTENT_WIDTH = 720;
 
 const SCALES = {
   XXSMALL: 0.25,
@@ -20,8 +20,9 @@ export default {
     background: "#FFF",
     border: "#EAEAEA",
     hover: "#F8F9F9",
-    text: "#1A1F2B",
-    textMuted: "#9E9FA0",
+    heading: "#050037",
+    text: "#4C4760",
+    textMuted: "#888794",
     primary: "#5A51FB",
     primaryMuted: "#6B62F8",
     secondary: "#5FAAFC"

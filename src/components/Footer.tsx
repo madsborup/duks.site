@@ -11,16 +11,17 @@ const Footer: React.FC = () => {
     border-top: 1px solid ${tokens.colors.border};
     max-width: ${tokens.CONTENT_WIDTH}px;
     margin: 0 auto;
-    padding: ${tokens.spacing.medium}px 0 ${tokens.spacing.xlarge}px;
+    padding: ${tokens.spacing.medium}px 0 ${tokens.spacing.medium}px;
   `
 
   const Section = styled.div`
     color: ${tokens.colors.textMuted};
+    font-size: ${tokens.font.size.h6};
   `
 
   return (
     <StyledFooter>
-      <Section> 2020 </Section>
+      <Section>a thing by<Link href="https://madsborup.me"> mads petersen</Link></Section>
       <Section></Section>
       <Section></Section>
     </StyledFooter>

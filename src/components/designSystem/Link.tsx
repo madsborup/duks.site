@@ -25,20 +25,20 @@ type LinkProps = CommonLinkProps &
   (InternalLinkProps | ExternalLinkProps)
 
 const InternalLink = styled(GatsbyLink)<InternalLinkProps>`
-  color: ${({ primary }) => primary ? tokens.colors.white : tokens.colors.text};
+  color: ${({ primary }) => primary ? tokens.colors.white : tokens.colors.heading};
   background: ${({ primary }) => primary ? tokens.colors.primary : 'none'};
   text-decoration: none;
   font-size: ${tokens.font.size.regular};
   border-radius: ${tokens.BORDER_RADIUS}px;
-  padding: ${({ primary }) => primary ? `${tokens.spacing.xxsmall}px ${tokens.spacing.small}px` : 0};
+  padding: ${({ primary }) => primary ? `${tokens.spacing.xsmall}px ${tokens.spacing.medium}px` : 0};
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 `
 
 const ExternalLink = styled.a<ExternalLinkProps>`
-  color: ${({ primary }) => primary ? tokens.colors.white : tokens.colors.text};
+  color: ${({ primary }) => primary ? tokens.colors.white : tokens.colors.heading};
   text-decoration: none;
   font-size: ${tokens.font.size.regular};
   background: ${({ primary }) => primary ? tokens.colors.primary : 'none'};
@@ -46,7 +46,7 @@ const ExternalLink = styled.a<ExternalLinkProps>`
   padding: ${({ primary }) => primary ? `${tokens.spacing.xxsmall}px ${tokens.spacing.small}px` : 0};
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 `
 

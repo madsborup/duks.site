@@ -32,6 +32,7 @@ const Image: React.FC<Props> = ({ src, maxWidth, align, children }: Props) => {
   const Container = styled.div<ContainerProps>`
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-bottom: ${({ align }) => align && `${tokens.spacing.medium}px`};
     margin: ${({ align }) => handleMargin(align)};
     float: ${({ align }) => align};
