@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
     border-top: 1px solid ${tokens.colors.border};
     max-width: ${tokens.CONTENT_WIDTH}px;
     margin: 0 auto;
-    padding: ${tokens.spacing.medium}px 0 ${tokens.spacing.medium}px;
+    padding: ${tokens.spacing.small}px 0 ${tokens.spacing.medium}px;
   `
 
   const Section = styled.div`
