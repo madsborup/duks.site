@@ -32,9 +32,8 @@ const Header: React.FC<Props> = ({ siteTitle }: Props) => {
   `
 
   const NavLink = styled(Link)`
-    font-size: ${tokens.font.size.h4};
+    font-size: ${tokens.font.size.h3};
     font-weight: 600;
-    letter-spacing: -0.2px;
   `
 
   return (

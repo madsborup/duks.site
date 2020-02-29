@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
 
   return (
     <StyledFooter>
-      <Section>a thing by<Link href="https://madsborup.me"> mads petersen</Link></Section>
+      <Section>a thing by<Link href="https://madsborup.me"> mads borup</Link></Section>
       <Section></Section>
       <Section></Section>
     </StyledFooter>

@@ -11,7 +11,7 @@ const LinkContainer: React.FC = () => {
     grid-template-columns: 1fr 1fr;
     grid-gap: ${tokens.spacing.medium}px;
     background: ${tokens.colors.white};
-    margin: ${tokens.spacing.xlarge}px 0;
+    margin: calc(${tokens.spacing.large}px * 2) 0;
   `
 
   const SignUpButton = styled(Link)`
