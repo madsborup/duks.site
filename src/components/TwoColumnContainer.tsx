@@ -36,6 +36,7 @@ const TwoColumnContainer: React.FC = () => {
     img {
       width: 100%;
       background-size: cover;
+      box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.14);
     }
   `
 
